@@ -308,6 +308,7 @@ body {
 
 .exercise-content {
     display: flex;
+    flex-wrap: wrap;
 }
 
 /* Contact section */
