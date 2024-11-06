@@ -110,7 +110,7 @@
         </div>
         
         <div id="content">
-            <div id="education" class="section-education">
+            <section id="education" class="section-education">
                 <span class="line-space"></span>
                 <h1 class="education-heading"> Education</h1>
                 <div class="education-card-container">
@@ -125,10 +125,10 @@
                 </div>
                 <span class="line-space"></span>
 
-            </div>
+            </section>
 
-            <div id="exercise" class="section-education">
-              <h1 class="education-heading"> Learn Web Programming</h1>
+            <section id="exercise" class="section-exercise">
+              <h1 class="education-heading"> Web Programming</h1>
                 <!-- <div class="exercise-content">
                     <a href="https://mtrees-22110443.onrender.com/SurveyPage/" class="main-button" target="_blank">Survey Page</a>
                     <a href="https://mtrees-22110443.onrender.com/ch05_ex1/" class="main-button" target="_blank">Ch05_ex1</a>
@@ -335,17 +335,17 @@
                   
                     </div>
                 </div>
-            </div>
+            </section>
 
 
             <!-- Begin Contact section -->
-            <div id="contact" class="section-contact">
+            <section id="contact" class="section-contact">
                 <h1 class="contact-heading"> Contact me</h1>
                 <div class="contact-content">
                     <p><a class="contact-tel" href="tel:+4733378901">+84 898 506 715</a></p>
                     <p class="contact-tel-p"><a class="contact-email" href= "mailto: nguyenphanminhtri612004@gmail.com"> nguyenphanminhtri612004@gmail.com </a></p>
                 </div>
-            </div>
+            </section>
                 
         </div> 
 
@@ -356,4 +356,27 @@
         </div>
     </div>
 </body>
+
+<script>
+document.addEventListener('scroll', function() {
+    var sections = document.querySelectorAll('section');
+    var navLinks = document.querySelectorAll('#nav > li');
+
+    sections.forEach(function(section, index) {
+        var rect = section.getBoundingClientRect();
+
+        // Kiểm tra xem phần tử section có nằm trong vùng viewport (có thể thêm một khoảng cách nhỏ để hiệu quả hơn)
+        var isVisible = rect.top >= 0 && rect.top <= window.innerHeight - 100 && rect.bottom >= 100;
+
+        if (isVisible) {
+            // Thêm class hover vào navbar item tương ứng
+            navLinks[index].classList.add('hover');
+        } else {
+            // Loại bỏ class hover nếu không trong viewport
+            navLinks[index].classList.remove('hover');
+        }
+    });
+});
+</script>
+
 </html>

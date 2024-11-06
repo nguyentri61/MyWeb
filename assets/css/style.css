@@ -83,6 +83,7 @@ body {
     right: 0;
     left: 0;
     z-index: 1000;
+    box-shadow: 0 0 15px 5px rgba(18, 22, 32, 0.9);
 }
 
 .logo-container {
@@ -147,6 +148,11 @@ body {
 
 #nav > li:hover > a,
 #nav .subnav li:hover a {
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav > li.hover > a {
     color: #000;
     background-color: #ccc;
 }
@@ -259,6 +265,10 @@ body {
 .section-education {
     padding-top: 80px;
     margin: 50px 100px;
+}
+
+.section-exercise {
+    margin: 100px 100px;
 }
 
 .education-heading {
@@ -519,3 +529,6 @@ body {
       font-size: 16px;
     }
 }
+
+
+/* Scroll */
